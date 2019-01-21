@@ -1,0 +1,30 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependencies
+node_modules
+
+# Vim
+*~
+*.swp
+*.swo
+*.swm
+*.swn
+*.swl
+*.swk
+*.swj
+
+# Generated files
+*.generated.js
+
+# Cloned repos
+projects/*
+
+# Cache
+cache/*
+.cache/
+
+# Redis
+dump.rdb
