@@ -6,6 +6,6 @@
  * @return {Boolean}
  *
  */
-module.exports = function objectIsObject(object) {
+export default function objectIsObject(object) {
   return Object.prototype.toString.call(object) === '[object Object]';
 }
