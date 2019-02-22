@@ -22,13 +22,23 @@ export default function formatNumberAsCurrency(num, precision, code) {
 
   if (special[code]) {
     return new Intl
-      .NumberFormat('en-US', {style: 'currency', currency: 'USD', minimumFractionDigits: precision})
+      .NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+        minimumFractionDigits: precision,
+        maximumFractionDigits: precision,
+      })
       .format(num)
       .replace('$', special[code]);
   }
   else {
     return new Intl
-      .NumberFormat('en-US', {style: 'currency', currency: code, minimumFractionDigits: precision})
+      .NumberFormat('en-US', {
+        style: 'currency',
+        currency: code,
+        minimumFractionDigits: precision,
+        maximumFractionDigits: precision,
+      })
       .format(num);
   }
 
