@@ -15,7 +15,7 @@
 export default function formatNumberAsCurrency(num, precision, code) {
 
   const special = {
-    'BTC': 'Ƀ'
+    'BTC': '฿'
   };
 
   if (special[code]) precision = 8; // ugh
