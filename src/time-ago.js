@@ -8,7 +8,7 @@
  * @return {String} e.g. 'a few seconds'
  *
  */
-export default function timeago(timestamp) {
+export default function timeAgo(timestamp) {
   let timeago;
   if (timestamp !== void 0) {
     const startDate = moment(timestamp);
