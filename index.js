@@ -9,7 +9,7 @@ import camelcase from './src/string-camelcase';
 
 // Get files & parse names
 let file;
-const files = glob.sync('./src/*.js');
+const files = glob.sync('./src/*.js', {ignore: './src/*-test.js'});
 
 /**
  *

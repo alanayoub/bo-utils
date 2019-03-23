@@ -50,7 +50,7 @@ const clientConfig = {
   // Ignore all modules in node_modules folder
   externals: [
     nodeExternals({
-      whitelist: []
+      whitelist: ['diff-json']
     })
   ],
 
