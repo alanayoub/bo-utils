@@ -18,6 +18,7 @@ export default ({data, range, width = 100, height = 30, styles = ''}) => {
   const rangeXOffset = range ? 20 : 0;
   const svgElement = createSVGInMemoryNode('svg');
   const len = data.length;
+  if (!len) return svgElement;
 
   //initialize scales
   const xExtent = d3.extent(data, d => d.x);
