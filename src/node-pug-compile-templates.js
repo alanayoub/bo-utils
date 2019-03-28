@@ -7,14 +7,14 @@ const fs   = require('fs-extra');
  * Compile Pug templates and save to a file
  * Compiled templates are provided in an array at `varName`
  *
- * @param {String} pug - pug glob
- * @param {String} out - output file
+ * @param {String} pugGlob - pug glob
+ * @param {String} outFile - output file
  * @return {Boolean}
  *
  */
 export default function pugCompileTemplates({varName = 'pug', pugGlob, outFile}) {
   try {
-    glob(pug, {}, (error, files) => {
+    glob(pugGlob, {}, (error, files) => {
       const len = files.length - 1;
       const pugTemplates = [];
       const start = 'const ${varName} = {';
@@ -40,7 +40,7 @@ export default function pugCompileTemplates({varName = 'pug', pugGlob, outFile})
 
       }
 
-      fs.writeFileSync(out, pugTemplates.join(','));
+      fs.writeFileSync(outFile, pugTemplates.join(','));
       return true;
 
     });
