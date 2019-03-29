@@ -17,7 +17,7 @@ export default function pugCompileTemplates({varName = 'pug', pugGlob, outFile})
     glob(pugGlob, {}, (error, files) => {
       const len = files.length - 1;
       const pugTemplates = [];
-      const start = 'const ${varName} = {';
+      const start = `const ${varName} = {`;
       const end = '}';
       let str, idx, file, name, prop, tmpl;
       for ([idx, file] of Object.entries(files)) {
