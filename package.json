@@ -18,9 +18,7 @@
     "fs-extra": "^6.0.0",
     "globby": "^8.0.1",
     "javascript-time-ago": "^1.0.31",
-    "moment": "^2.23.0"
-  },
-  "devDependencies": {
+    "moment": "^2.23.0",
     "@babel/core": "^7.3.4",
     "@babel/node": "^7.2.2",
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
