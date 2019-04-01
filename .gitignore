@@ -14,7 +14,7 @@ npm-debug.log*
 *.swj
 
 # Dependencies
-#node_modules
+node_modules
 
 # Generated files
 *.generated.js
