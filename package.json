@@ -6,7 +6,10 @@
   "description": "",
   "private": true,
   "main": "dist/index.js",
-  "scripts": {},
+  "scripts": {
+    "build:prod": "npx webpack --config webpack.config.js",
+    "build:dev": "npx webpack --config webpack.config.js"
+  },
   "keywords": [
     "Binary Overdose"
   ],

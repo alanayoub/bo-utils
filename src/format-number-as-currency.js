@@ -7,21 +7,24 @@
  * 0.001    2             Ƀ0.00
  *
  * @param {Number} num
- * @param {Number} precision
  * @param {String} code - currency code
+ * @param {Number} [precision]
  * @return {String}
  *
  */
-export default function formatNumberAsCurrency(num, precision, code) {
+export default function formatNumberAsCurrency(num, code, precision) {
 
   const special = {
-    'BTC': '฿'
+    'BTC': '฿',
+    'SAT': 'sat'
   };
 
-  if (special[code]) precision = 8; // ugh
-
   if (special[code]) {
-    return new Intl
+    if (!precision) {
+      if (code === 'BTC') precision = 8;
+      if (code === 'SAT') precision = 0;
+    }
+    let output = new Intl
       .NumberFormat('en-US', {
         style: 'currency',
         currency: 'USD',
@@ -29,9 +32,15 @@ export default function formatNumberAsCurrency(num, precision, code) {
         maximumFractionDigits: precision,
       })
       .format(num)
-      .replace('$', special[code]);
+      .replace('$', '');
+    if (code === 'SAT') output += ` ${special[code]}`;
+    else output = special[code] + output;
+    return output;
   }
   else {
+    if (!precision) {
+      precision = 2;
+    }
     return new Intl
       .NumberFormat('en-US', {
         style: 'currency',

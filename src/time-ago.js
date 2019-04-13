@@ -15,7 +15,7 @@ export default function timeAgo(timestamp) {
     const endDate = moment(new Date);
     const ms = Math.abs(startDate.diff(endDate));
     const duration = moment.duration(ms).humanize();
-    timeago = `${duration} (${ms / 1000}s)`;
+    timeago = `${duration}`;
   }
   return timeago;
 }
