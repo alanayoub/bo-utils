@@ -3,6 +3,7 @@
 //
 
 import arrayAverage from './src/array-average.js';
+import arrayDifference from './src/array-difference.js';
 import arrayNormalize from './src/array-normalize.js';
 import arrayPercentRange from './src/array-percent-range.js';
 import arrayToObject from './src/array-to-object.js';
@@ -27,6 +28,7 @@ import numberScale from './src/number-scale.js';
 import objectGetNestedProperty from './src/object-get-nested-property.js';
 import objectIsEmptyObject from './src/object-is-empty-object.js';
 import objectIsObject from './src/object-is-object.js';
+import objectSetNestedProperty from './src/object-set-nested-property.js';
 import objectToArray from './src/object-to-array.js';
 import partialApplication from './src/partial-application.js';
 import stringCamelcase from './src/string-camelcase.js';
@@ -39,6 +41,7 @@ import timeseriesThin from './src/timeseries-thin.js';
 
 export {
   arrayAverage,
+  arrayDifference,
   arrayNormalize,
   arrayPercentRange,
   arrayToObject,
@@ -63,6 +66,7 @@ export {
   objectGetNestedProperty,
   objectIsEmptyObject,
   objectIsObject,
+  objectSetNestedProperty,
   objectToArray,
   partialApplication,
   stringCamelcase,
