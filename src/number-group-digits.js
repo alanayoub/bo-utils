@@ -18,6 +18,7 @@ import isInteger from './is-integer.js';
  *
  */
 export default function numberGroupDigits(number, delimiter = ',') {
+  number = Math.round(number);
   if (!isInteger(number)) return void false;
   return Math.floor(number).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, `$1${delimiter}`);
 };
