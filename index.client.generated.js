@@ -23,6 +23,7 @@ import isNumber from './src/is-number.js';
 import numberGroupDigits from './src/number-group-digits.js';
 import numberNormalize from './src/number-normalize.js';
 import numberScale from './src/number-scale.js';
+import objectFlattenObject from './src/object-flatten-object.js';
 import objectGetNestedProperty from './src/object-get-nested-property.js';
 import objectIsEmptyObject from './src/object-is-empty-object.js';
 import objectIsObject from './src/object-is-object.js';
@@ -59,6 +60,7 @@ export {
   numberGroupDigits,
   numberNormalize,
   numberScale,
+  objectFlattenObject,
   objectGetNestedProperty,
   objectIsEmptyObject,
   objectIsObject,
