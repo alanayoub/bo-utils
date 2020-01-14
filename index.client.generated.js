@@ -37,6 +37,7 @@ import timeseriesPrune from './src/timeseries-prune.js';
 import timeseriesRescale from './src/timeseries-rescale.js';
 import timeseriesScale from './src/timeseries-scale.js';
 import timeseriesThin from './src/timeseries-thin.js';
+import webCookieGetCookieByName from './src/web-cookie-get-cookie-by-name.js';
 
 export {
   arrayAverage,
@@ -73,5 +74,6 @@ export {
   timeseriesPrune,
   timeseriesRescale,
   timeseriesScale,
-  timeseriesThin
+  timeseriesThin,
+  webCookieGetCookieByName
 }
