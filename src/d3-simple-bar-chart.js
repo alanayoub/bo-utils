@@ -14,7 +14,7 @@ import percentRange from './array-percent-range.js';
  * @return {SVGElement}
  *
  */
-export default ({data, range, width = 100, height = 30, styles = '', fill = '#eee'}) => {
+export default ({data, range, width = 100, height = 30, styles = '', fill = '#eee', textFill = '#00A3E5'}) => {
 
   const rangeXOffset = range ? 20 : 0;
   const xArray = data.map(d => d.x);
@@ -70,7 +70,7 @@ export default ({data, range, width = 100, height = 30, styles = '', fill = '#ee
     rangeGroup.append('text')
       .attr('x', '2')
       .attr('y', 8)
-      .attr('fill', '#00A3E5')
+      .attr('fill', textFill)
       .attr('font-size', '10px')
       .attr('text-anchor', 'start')
       .text(percentSwing);

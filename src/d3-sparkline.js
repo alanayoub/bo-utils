@@ -13,7 +13,7 @@ import percentRange from './array-percent-range.js';
  * @return {SVGElement}
  *
  */
-export default ({data, range, width = 100, height = 30, styles = ''}) => {
+export default ({data, range, width = 100, height = 30, styles = '', circleFill = '#00A3E5', pathStroke = '#000', textFill = '#555'}) => {
 
   const rangeXOffset = range ? 20 : 0;
   const svgElement = createSVGInMemoryNode('svg');
@@ -42,7 +42,7 @@ export default ({data, range, width = 100, height = 30, styles = ''}) => {
      .datum(data)
      .attr('class', 'cryptohub-sparkline')
      .attr('fill', 'none')
-     .attr('stroke', '#000')
+     .attr('stroke', pathStroke)
      .attr('stroke-width', '0.5px')
      .attr('d', line);
 
@@ -50,7 +50,7 @@ export default ({data, range, width = 100, height = 30, styles = ''}) => {
      .attr('class', 'cryptohub-sparkline-circle')
      .attr('cx', x(data[len - 1].x))
      .attr('cy', y(data[len - 1].y))
-     .attr('fill', '#00A3E5')
+     .attr('fill', circleFill)
      .attr('stroke', 'none')
      .attr('r', 1.5);
 
@@ -78,7 +78,7 @@ export default ({data, range, width = 100, height = 30, styles = ''}) => {
     rangeGroup.append('text')
       .attr('x', '2')
       .attr('y', '8')
-      .attr('fill', '#555')
+      .attr('fill', textFill)
       .attr('font-size', '10px')
       .attr('text-anchor', 'start')
       .text(percentSwing);
